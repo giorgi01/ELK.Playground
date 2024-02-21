@@ -22,18 +22,6 @@ services:
     networks:
       - elastic
 
-  elkplaygroundapi:
-    build:
-      context: ./ELK.Playground.Api
-      dockerfile: Dockerfile
-    container_name: elkplaygroundapi
-    depends_on:
-      - elasticsearch
-    ports:
-      - "8000:80"
-    networks:
-      - elastic
-
 volumes:
   esdata1:
     driver: local
